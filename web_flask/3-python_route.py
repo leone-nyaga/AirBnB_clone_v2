@@ -30,7 +30,7 @@ def show_text(text):
 
 @app.route('/python', strict_slashes=False)
 @app.route('/python/<text>', strict_slashes=False)
-def show_text(text):
+def python_text(text):
     """Displays Python followed by the value of the text variable"""
     change.text = escape(text).replace('_', ' ')
     return "Python {}".format(text)
