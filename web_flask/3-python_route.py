@@ -28,7 +28,7 @@ def show_text(text):
     return "C {}".format(text)
 
 
-@app.route('/python', strict_slashes=False)
+@app.route('/python', defaults={'text': 'is_cool'}, strict_slashes=False)
 @app.route('/python/<text>', strict_slashes=False)
 def python_text(text):
     """Displays Python followed by the value of the text variable"""
